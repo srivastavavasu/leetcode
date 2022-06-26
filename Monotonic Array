@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isMonotonic(int[] nums) {
+        boolean isNonDecreasing = true;
+        boolean isNonIncreasing = true;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] < nums[i - 1]) {
+                isNonDecreasing = false;
+            }
+            if (nums[i] > nums[i - 1]) {
+                isNonIncreasing = false;
+            }
+        }
+        return isNonDecreasing || isNonIncreasing;
+    }
+}
